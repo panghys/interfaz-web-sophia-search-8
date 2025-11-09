@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-sans: "MuktaVaani", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,24 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+@font-face {
+  font-family: 'MuktaVaani';
+  src: url('/fonts/MuktaVaani-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuktaVaani';
+  src: url('/fonts/MuktaVaani-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.reset{
+  all:unset;
 }
 
 body {
@@ -33,6 +52,12 @@ body {
 .barraprincipal{
   height: 100px;
   width: 100%;
+  display: flex;
+	flex-direction: row;
+  justify-content: center;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: center;
 
 }
 
@@ -50,4 +75,104 @@ body {
 
 .botonses:hover{
     color:#2e8b97;
+}
+
+.deco{
+  width: 10%;
+  height: 20%;
+  background: #532ece;
+  margin-top: 35px;
+}
+
+.introduccion{
+  font-size: 40px;
+  color: #ededed;
+}
+
+.parrafoprincipal{
+  font-size: large;
+  color: #ededed;
+  text-align: center;
+}
+
+.plan{
+  border-radius: 5%;
+  background: #eadede;
+  width: 400px;
+  height: 580px;
+  margin-top: 550px;
+  padding: 10px;
+}
+.plan2{
+  background: #2C307A;
+  border-radius: 5%;
+  width: 400px;
+  height: 580px;
+  margin-top: 550px;
+  padding: 10px;
+}
+
+.contenedorplan{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.botonsus{
+  border-radius: 12px;
+  background-color: #eadede;
+  border-color: #74D9E6;
+  color:#532ECE;
+  border-width: 3px;
+}
+
+.botonsus1{
+  border-radius: 12px;
+  background-color: #eadede;
+  border-color: #74D9E6;
+  color:#532ECE;
+  border-width: 5px;
+  background: linear-gradient(to right, #2eb6ce, #d8dddd);
+}
+
+.botonsus:hover{
+  background:#bcbcbc;
+}
+
+.botonsus1:hover {
+  animation: pulso 5s linear infinite;
+}
+
+@keyframes pulso {
+  0% {
+    border-color: #3b23a1;
+    background: #3b23a1;;
+  }
+  25% {
+    border-color: #4c2dd1;
+    background: #6b4bf5;
+  }
+  50% {
+    border-color: #532ECE;
+    background:#532ECE;
+  }
+  75% {
+    border-color: #6b4bf5;
+    background:#4c2dd1;
+  }
+  100% {
+    border-color: #3b23a1;
+    background:#3b23a1;
+  }
+}
+
+.linea{
+  width: 80%;
+  height: 1px;
+  background: #6145C8;
+  margin: 20px auto;
+  border-radius: 10px;
 }
