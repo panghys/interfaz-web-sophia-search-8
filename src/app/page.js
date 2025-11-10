@@ -1,9 +1,24 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
+import { useState } from "react";
+
+
 export default function Home() {
+    const [showPopup, setShowPopup] = useState(false);
+    const [termsAccepted, setTermsAccepted] = useState(false);
+    const openPopup = () => setShowPopup(true);
+    const closePopup = () => setShowPopup(false);
+    const handleAcceptTerms = () => setTermsAccepted(true);
+
+
   return (
     <main>
+    
+    
+
     <div className="barraprincipal justify-between items-center font-sans"> 
       <ul className="flex items-center align-center gap-8 font-sans ml-5">  
         <Link href="/home">
@@ -42,11 +57,10 @@ export default function Home() {
         <div className="font-sans font-bold gap-2 px-3 py-3 text-[#532ECE] text-4xl "> Gratuito 
           <div className="font-sans font-normal text-gray-700 text-2xl py-2 px-3">
           <p>$0/mes</p>
-          <Link href="/planfree">
-          <button className="botonsus text-lg mt-4 px-3 py-2 w-fit">
-            Obtener Sophia gratuito
-          </button>
-          </Link>
+         
+          <button onClick={openPopup} className="botonsus text-lg mt-4 px-3 py-2 w-fit">
+                Obtener Sophia gratuito
+              </button>
           <ul className="mt-5 text-lg">
             <li className="py-2">✔️ Límite de noticias: 100/mes</li>
             <li className="py-2">✔️ Capacidad de colecciones: 250</li>
@@ -60,11 +74,10 @@ export default function Home() {
           <div className="font-sans font-bold gap-2 px-3 py-3 text-[#F2F2F2] text-4xl "> Premium 
             <div className="font-sans font-normal text-[#F2F2F2] text-2xl py-2 px-3">
               <p>$9999/mes</p>
-              <Link href="/planpremium">
-                <button className="botonsus1 text-lg mt-4 px-3 py-2 w-fit">
-                  Obtener Sophia premium
-                </button>
-              </Link>
+             
+              <button onClick={openPopup} className="botonsus1 text-lg mt-4 px-3 py-2 w-fit"> 
+                Obtener Sophia premium
+              </button>
               <ul className="mt-5 text-lg text-[#F2F2F2]">
                 <li className="py-2">✔️ Sin límite de noticias</li>
                 <li className="py-2">✔️ Colecciones ilimitadas</li>
@@ -80,6 +93,56 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+       {/* Popup de términos y condiciones */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <button onClick={closePopup} className="close-button">X</button>
+            <h2 className="popup-title">Términos y condiciones</h2>
+            <div className="terms-content">
+              <p>1. Aceptación de los términos <br />
+                Al utilizar o descargar contenido a través del sistema de noticias, el usuario acepta cumplir con estos Términos y Condiciones. Si el usuario no está de acuerdo, deberá abstenerse de usar la plataforma. <br /><br />
+                2. Descripción del servicio <br />
+                El sistema permite acceder, visualizar y descargar noticias provenientes de distintos medios digitales. La aplicación actúa como intermediario tecnológico y no almacena ni modifica el contenido original de las fuentes externas. <br /><br />
+                3. Propiedad intelectual <br />
+                Todo el contenido descargado pertenece a sus respectivos autores o medios de comunicación. El sistema no reclama propiedad ni derechos sobre dicho contenido, y su uso queda sujeto a las políticas de cada fuente. <br /><br />
+                4. Uso permitido <br />
+                El usuario podrá utilizar el sistema solo para fines personales, académicos o informativos. Está prohibido el uso comercial, la redistribución masiva o la modificación del contenido descargado. <br /><br />
+                5. Fuentes con restricción o suscripción <br />
+                Si una fuente de noticias requiere suscripción, autenticación o pago, el usuario debe poseer una cuenta válida en ese medio para acceder al contenido. El sistema no elude, omite ni reemplaza los mecanismos de acceso restringido de los sitios de origen. El usuario no podrá descargar noticias de fuentes de pago si no cuenta con los permisos o suscripciones necesarias. <br /><br />
+                6. Responsabilidad del usuario <br />
+                El usuario es el único responsable del uso que haga de la información descargada, así como de verificar la validez de los derechos de autor y condiciones de uso de cada medio. El equipo desarrollador no se hace responsable por el uso indebido o la distribución no autorizada del contenido. <br /><br />
+                7. Enlaces externos <br />
+                Los enlaces y recursos externos pertenecen a terceros. El sistema no controla ni garantiza la disponibilidad, exactitud o legalidad del contenido enlazado. <br /><br />
+                8. Modificaciones de los términos <br />
+                El equipo de desarrollo podrá modificar estos términos en cualquier momento, notificando los cambios a los usuarios dentro del sistema o en la documentación oficial del proyecto. <br /><br />
+                9. Limitación de responsabilidad <br />
+                El sistema se proporciona “tal cual” y sin garantías. El equipo desarrollador no será responsable de daños directos o indirectos derivados del uso, descarga o acceso a contenido externo.
+              </p>
+            </div>
+            <label>
+              <input
+                type="checkbox"
+                checked={termsAccepted}
+                onChange={() => setTermsAccepted(!termsAccepted)}
+              />
+              Aceptar términos
+            </label>
+            <button
+              onClick={handleAcceptTerms}
+              disabled={!termsAccepted}
+              className="continue-button"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      )}
+
+
+      
       <div className="barrafinal mt-250">
       <div className="barrafinal2">
           <Link href="/home" className="py-2 px-5 mt-1">

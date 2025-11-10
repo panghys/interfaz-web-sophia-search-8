@@ -213,3 +213,85 @@ body {
 .botonabajo:hover{
   color:#181616
 }
+
+
+/* Fondo semitransparente */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Estilo del recuadro con el contenido */
+.popup-content {
+  background-color: #7a4ef4; /* Morado */
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  color: #fff;
+  
+}
+
+/* Título */
+.popup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Botón de cerrar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Contenido de los términos con scroll */
+.terms-content {
+  background-color: #fff; /* Fondo blanco para el área de los términos */
+  color: #000;  /* Texto en negro */
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px; /* Redondear las esquinas */
+}
+
+/* Estilo del checkbox de aceptar */
+label {
+  display: block;
+  margin: 10px 0;
+  color: white;
+}
+
+/* Botón de continuar */
+.continue-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #532ece;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.continue-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
