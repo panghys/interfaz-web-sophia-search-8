@@ -37,7 +37,7 @@ export default function PlanPremiumSuccess() {
       </div>
 
       <div className="barraprincipal flex gap-6 justify-between items-center">
-        <div className="deco"></div>
+        <div className="w-[10%] h-[20%] bg-[#532ece] mt-[35px]"></div>
         <div className="introduccion gap-6 font-sans font-bold tracking-widest mt-5">
           Comprobante enviado
           <div className="font-sans tracking-normal mt-2 text-gray-100 parrafoprincipal font-normal">
@@ -45,7 +45,7 @@ export default function PlanPremiumSuccess() {
             notificará por correo.
           </div>
         </div>
-        <div className="deco"></div>
+        <div className="w-[10%] h-[20%] bg-[#532ece] mt-[35px]"></div>
       </div>
 
       <div className="contenedorplan flex barraprincipal font-sans gap-15 mt-10">
