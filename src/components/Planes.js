@@ -3,16 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Planes(){
+    const router = useRouter();
     const [showPopup, setShowPopup] = useState(false);
     const [termsAccepted, setTermsAccepted] = useState(false);
-    const openPopup = () => setShowPopup(true);
+    const [selectedPlan, setSelectedPlan] = useState(null);
+    
+    const openPopup = (planType) => {
+      setSelectedPlan(planType);
+      setShowPopup(true);
+    };
+    
     const closePopup = () => {
       setShowPopup(false);
-      setTermsAccepted(false); 
+      setTermsAccepted(false);
+      setSelectedPlan(null); 
     };
-    const handleAcceptTerms = () => setTermsAccepted(true);
+    
+    const handleAcceptTerms = () => {
+      if (termsAccepted && selectedPlan === 'premium') {
+        router.push('/planpremium');
+      }
+    };
 
     return(
         <div className="flex flex-col md:flex-row justify-center items-start gap-10 py-10">
@@ -36,7 +50,7 @@ export default function Planes(){
             </p>
 
             <div className="flex justify-center">
-            <button onClick={openPopup}
+            <button onClick={() => openPopup('free')}
                 className="bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] text-white font-semibold py-2 px-6 rounded-xl shadow-[0_0_12px_rgba(59,130,246,0.7)] hover:shadow-[0_0_25px_rgba(59,130,246,1)] hover:scale-105 transition-all duration-300"
             >
                 Obtener Sophia Gratuito
@@ -69,7 +83,7 @@ export default function Planes(){
             </p>
 
             <div className="flex justify-center">
-            <button onClick={openPopup}
+            <button onClick={() => openPopup('premium')}
                 className="bg-gradient-to-r from-[#7e22ce] to-[#a855f7]
                         text-white font-semibold py-2 px-6 rounded-xl
                         shadow-[0_0_12px_rgba(147,51,234,0.7)] hover:shadow-[0_0_25px_rgba(147,51,234,1)]

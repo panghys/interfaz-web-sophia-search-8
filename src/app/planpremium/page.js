@@ -1,9 +1,19 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function PlanPremium() {
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push('/planpremium/success');
+  };
+
   return (
     <main>
       <Navbar/>
@@ -46,7 +56,7 @@ export default function PlanPremium() {
 
           </div>
 
-          <form className="px-6 pb-8 space-y-6 mt-10 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="px-6 pb-8 space-y-6 mt-10 max-w-md mx-auto">
             <div>
               <label
                 htmlFor="proof-upload"
