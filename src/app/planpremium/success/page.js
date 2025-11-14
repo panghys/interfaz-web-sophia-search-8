@@ -1,40 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function PlanPremiumSuccess() {
   return (
     <main>
-      <div className="barraprincipal justify-between items-center font-sans">
-        <ul className="flex items-center gap-8 font-sans ml-5">
-          <Link href="/home">
-            <Image
-              src="/logo.png"
-              alt="logo sophia search"
-              width={300}
-              height={300}
-              priority
-            />
-          </Link>
-          <Link href="/catalogo">
-            <button className="botonses px-2 py-2 font-sans">Catálogo</button>
-          </Link>
-          <Link href="/planes">
-            <button className="botonses px-2 py-2 font-sans">Planes</button>
-          </Link>
-          <div className="flex gap-4 ml-120 font-sans">
-            <Link href="/register">
-              <button className="boton text-white rounded-lg px-3 py-2 font-sans">
-                Registrarse
-              </button>
-            </Link>
-            <Link href="/login">
-              <button className="botonses px-2 py-2 font-sans">
-                Iniciar sesión
-              </button>
-            </Link>
-          </div>
-        </ul>
-      </div>
+      <Navbar/>
 
       <div className="barraprincipal flex gap-6 justify-between items-center">
         <div className="w-[10%] h-[20%] bg-[#532ece] mt-[35px]"></div>
@@ -48,13 +20,13 @@ export default function PlanPremiumSuccess() {
         <div className="w-[10%] h-[20%] bg-[#532ece] mt-[35px]"></div>
       </div>
 
-      <div className="contenedorplan flex barraprincipal font-sans gap-15 mt-10">
-        <div className="plan2 w-full max-w-xl mx-auto px-6 py-10 text-center">
+      <div className="contenedorplan flex barraprincipal font-sans gap-15 mb-100">
+        <div className="bg-[#2C307A] rounded-[5%] w-[400px] h-[200px] mt-[100px] p-[10px]w-full max-w-xl mx-auto px-6 py-10 text-center">
           <p className="text-[#F2F2F2] text-xl">
             Mientras tanto, puedes seguir explorando nuestras funciones o
             regresar al panel principal.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/home">
               <button className="botonses px-4 py-2 font-sans">
                 Ir al inicio
@@ -68,6 +40,7 @@ export default function PlanPremiumSuccess() {
           </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

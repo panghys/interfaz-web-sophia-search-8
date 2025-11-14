@@ -29,8 +29,8 @@ export default function Footer(){
           </Link>
           <Link href="face" className="px-3">
             <Image
-              src="/insta.png"
-              alt="insta"
+              src="/facebook.png"
+              alt="facebook"
               width={30}
               height={30}
               priority
@@ -38,8 +38,8 @@ export default function Footer(){
             </Link>
           <Link href="linkedin" className="px-3">
             <Image
-              src="/insta.png"
-              alt="insta"
+              src="/linkedin.png"
+              alt="linkedin"
               width={30}
               height={30}
               priority
@@ -69,8 +69,8 @@ export default function Footer(){
             Otros
             <ul className="px-3 text-gray-700 text-sm py-3">
               <Link href="/tyc"><li className="py-2 botonabajo">Términos y condiciones</li></Link>
-              <Link href="/planes"><li className="py-2 botonabajo">Política de privacidad</li></Link>
-              <Link href="/contacto"><li className="py-2 botonabajo">Interfaz de administrador</li></Link>
+              <Link href="/privacidad"><li className="py-2 botonabajo">Política de privacidad</li></Link>
+              <Link href="/admin"><li className="py-2 botonabajo">Interfaz de administrador</li></Link>
             </ul>
             
           </div>
