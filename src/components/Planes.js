@@ -30,10 +30,7 @@ export default function Planes(){
 
     return(
         <div className="flex flex-col md:flex-row justify-center items-start gap-10 py-10">
-        <div className="relative bg-gradient-to-b from-[#f9f9f9] to-[#e9e9e9]
-        border border-blue-400 
-        shadow-[0_0_25px_rgba(80,150,255,0.5)] hover:shadow-[0_0_45px_rgba(80,150,255,0.9)]
-        rounded-2xl p-8 w-full max-w-xs transition-all duration-500">
+        <div className="relative bg-gradient-to-b from-[#f9f9f9] to-[#e9e9e9] border border-blue-400 shadow-[0_0_25px_rgba(80,150,255,0.5)] hover:shadow-[0_0_45px_rgba(80,150,255,0.9)] rounded-2xl p-8 w-full max-w-xs transition-all duration-500">
             
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">
             Plan Gratuito
@@ -58,10 +55,7 @@ export default function Planes(){
             </div>
         </div>
 
-        <div className="relative bg-gradient-to-b from-[#2e0060] to-[#120030]
-        border border-purple-700 
-        shadow-[0_0_25px_rgba(150,80,255,0.5)] hover:shadow-[0_0_45px_rgba(160,80,255,0.9)]
-        rounded-2xl p-8 w-full max-w-xs transition-all duration-500">
+        <div className="relative bg-gradient-to-b from-[#2e0060] to-[#120030] border border-purple-700 shadow-[0_0_25px_rgba(150,80,255,0.5)] hover:shadow-[0_0_45px_rgba(160,80,255,0.9)] rounded-2xl p-8 w-full max-w-xs transition-all duration-500">
 
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">
             Sophia Premium
@@ -84,10 +78,7 @@ export default function Planes(){
 
             <div className="flex justify-center">
             <button onClick={() => openPopup('premium')}
-                className="bg-gradient-to-r from-[#7e22ce] to-[#a855f7]
-                        text-white font-semibold py-2 px-6 rounded-xl
-                        shadow-[0_0_12px_rgba(147,51,234,0.7)] hover:shadow-[0_0_25px_rgba(147,51,234,1)]
-                        hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-[#7e22ce] to-[#a855f7] text-white font-semibold py-2 px-6 rounded-xl shadow-[0_0_12px_rgba(147,51,234,0.7)] hover:shadow-[0_0_25px_rgba(147,51,234,1)] hover:scale-105 transition-all duration-300"
             >
                 Obtener Sophia Premium
             </button>

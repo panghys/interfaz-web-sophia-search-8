@@ -24,10 +24,7 @@ export default function PlanPremium() {
       </p>
       </div>
 
-        <div className="relative bg-gradient-to-b from-[#2e0060] to-[#120030]
-          border border-purple-700 
-          shadow-[0_0_25px_rgba(150,80,255,0.5)] hover:shadow-[0_0_45px_rgba(160,80,255,0.9)]
-          rounded-2xl p-8 w-full max-w-xs transition-all duration-500 mx-auto">
+        <div className="relative bg-gradient-to-b from-[#2e0060] to-[#120030] border border-purple-700 shadow-[0_0_25px_rgba(150,80,255,0.5)] hover:shadow-[0_0_45px_rgba(160,80,255,0.9)] rounded-2xl p-8 w-full max-w-xs transition-all duration-500 mx-auto">
 
               <h3 className="text-2xl font-semibold text-white mb-4 text-center">
               Sophia Premium
@@ -71,10 +68,7 @@ export default function PlanPremium() {
               </p>
             </div>
 
-            <button
-              type="submit"
-              className="botonsus1 text-lg mt-4 px-3 py-2 w-full max-w-xs mx-auto block"
-            >
+            <button type="submit" className="botonsus1 text-lg mt-4 px-3 py-2 w-full max-w-xs mx-auto block">
               Enviar comprobante
             </button>
           </form>
