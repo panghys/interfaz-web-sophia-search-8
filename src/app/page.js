@@ -1,7 +1,6 @@
 'use client';
-import Navbar from "@/components/Navbar";
 import Planes from "@/components/Planes";
-import Footer from "@/components/Footer";
+
 
 
 
@@ -9,7 +8,6 @@ import Footer from "@/components/Footer";
 export default function Suscripciones() {
   return (
     <main>
-      <Navbar/>
       <div className="text-center mt-10 mb-6">
       <h2 className="relative inline-block text-4xl font-bold tracking-wide text-white">
         <span className="bg-gradient-to-r from-[#A78BFA] via-[#7C3AED] to-[#C084FC] bg-clip-text text-transparent">
@@ -22,8 +20,6 @@ export default function Suscripciones() {
       </p>
     </div>
     <Planes/>
-    <div className="mb-50"></div>
-    <Footer/>
       </main>
   );
 }

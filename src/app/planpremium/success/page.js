@@ -1,12 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+
 
 export default function PlanPremiumSuccess() {
   return (
     <main>
-      <Navbar/>
 
       <div className="barraprincipal flex gap-6 justify-between items-center">
         <div className="w-[10%] h-[20%] bg-[#532ece] mt-[35px]"></div>
@@ -40,7 +37,6 @@ export default function PlanPremiumSuccess() {
           </div>
         </div>
       </div>
-      <Footer/>
     </main>
   );
 }

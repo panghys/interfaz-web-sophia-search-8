@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-    <div className="barrafinal mt-0">
+    <div className="barrafinal mt-50">
       <div className="barrafinal2">
           <Link href="/home" className="py-2 px-5 mt-1">
             <Image

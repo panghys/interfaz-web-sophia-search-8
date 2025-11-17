@@ -1,10 +1,6 @@
 'use client';
-
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 
 export default function PlanPremium() {
   const router = useRouter();
@@ -16,8 +12,6 @@ export default function PlanPremium() {
 
   return (
     <main>
-      <Navbar/>
-
       <div className="text-center mt-10 mb-10">
       <h2 className="relative inline-block text-4xl font-bold tracking-wide text-white">
         <span className="bg-gradient-to-r from-[#A78BFA] via-[#7C3AED] to-[#C084FC] bg-clip-text text-transparent">
@@ -85,7 +79,6 @@ export default function PlanPremium() {
             </button>
           </form>
       <div className="mb-50"></div>
-      <Footer/>
     </main>
   );
 }

@@ -1,29 +1,37 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const mukta = localFont({
+  src: [
+    {
+      path: "../../public/fonts/MuktaVaani-Regular.ttf",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "../../public/fonts/MuktaVaani-Bold.ttf",
+      weight: "700",
+      style: "normal"
+    }
+  ],
+  variable: "--font-mukta"
 });
 
 export const metadata = {
-  title: "Planes de suscripción",
-  description: "planes",
+  title: "Sophia Search",
+  description: "App Sophia Search"
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="es" className={mukta.variable}>
+      <body>
+        <Navbar/>
         {children}
-      </body>
+        <Footer/>
+        </body>
     </html>
   );
 }
