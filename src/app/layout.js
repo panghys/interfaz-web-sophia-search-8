@@ -26,12 +26,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body className={mukta.variable + " font-mukta"}>
-        <Navbar/>
+    <body className={`${mukta.variable} font-mukta flex flex-col min-h-screen`}>
+      <Navbar />
+      <main className="flex-1">
         {children}
-        <Footer/>
-      </body>
-    </html>
-  );
+      </main>
+      <Footer />
+    </body>
+  )
 }
