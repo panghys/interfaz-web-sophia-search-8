@@ -24,14 +24,22 @@ export const metadata = {
   description: "App Sophia Search"
 };
 
-export default function RootLayout({ children }) {
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <body className={`${mukta.variable} font-mukta flex flex-col min-h-screen`}>
-      <Navbar />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </body>
-  )
+    <html lang="en">
+            <body className={`${mukta.variable} font-mukta flex flex-col min-h-screen`}>
+        <Navbar />
+        
+        <main className="grow">{children}</main>
+        
+        
+        <Footer />
+      </body>
+    </html>
+  );
 }

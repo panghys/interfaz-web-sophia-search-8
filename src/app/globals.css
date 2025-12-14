@@ -259,3 +259,118 @@ label {
   cursor: not-allowed;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+    /* -- Primarios -- */
+    --palette-purple: #532ece;
+    --palette-cyan: #44cfe2;
+    --palette-black: #1d1d1b;
+    --palette-grey: #818181;
+
+    /* -- Secundarios -- */
+    --palette-green: #46c5a5;
+    --palette-red: #ff6164;
+    --palette-white: #f2f2f2;
+    --palette-yellow: #ffc500;
+    --palette-blue-dark: #2a3176;
+
+    /* -- Extendida -- */
+    --palette-grey-dark: #27272a;
+
+    /* -- Fondos (Surfaces) -- */
+    --color-background: var(--palette-black);
+    --color-surface-dark: var(--palette-black);
+    --color-surface-light: var(--palette-white);
+    --color-surface-accent: var(--palette-purple);
+    --color-surface-accent-dark: var(--palette-blue-dark);
+
+    /* -- Texto (Foregrounds) -- */
+    --color-foreground: var(--palette-white);
+    --color-foreground-on-light: var(--palette-black);
+    --color-text-primary: var(--palette-white);
+    --color-text-secondary: var(--palette-cyan);
+    --color-text-muted: var(--palette-grey);
+    --color-text-muted-on-light: var(--palette-grey);
+    --color-text-accent: var(--palette-purple);
+    --color-text-danger: var(--palette-red);
+
+    /* -- Botones (Buttons) -- */
+    --color-btn-primary-bg: var(--palette-purple);
+    --color-btn-primary-text: var(--palette-white);
+    --color-btn-primary-hover-bg: var(--palette-white);
+    --color-btn-primary-hover-text: var(--palette-purple);
+
+    --color-btn-secondary-bg: var(--palette-cyan);
+    --color-btn-secondary-text: var(--palette-white);
+
+    /* -- Links -- */
+    --color-link-active: var(--palette-cyan);
+    --color-link-hover: var(--palette-white);
+    --color-link-on-light: var(--palette-purple);
+
+    /* -- Bordes y Acentos -- */
+    --color-border-primary: var(--palette-cyan);
+    --color-border-muted-on-light: var(--palette-black);
+    --color-accent-warning: var(--palette-yellow);
+
+    /* -- Variables Base de Next.js -- */
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+}
+
+@theme inline {
+    /* Fondos */
+    --color-background: var(--color-background);
+    --color-surface-dark: var(--color-surface-dark);
+    --color-surface-light: var(--color-surface-light);
+    --color-surface-accent: var(--color-surface-accent);
+    --color-surface-accent-dark: var(--color-surface-accent-dark);
+
+    /* Texto */
+    --color-foreground: var(--color-foreground);
+    --color-foreground-on-light: var(--color-foreground-on-light);
+    --color-text-primary: var(--color-text-primary);
+    --color-text-secondary: var(--color-text-secondary);
+    --color-text-muted: var(--color-text-muted);
+    --color-text-muted-on-light: var(--color-text-muted-on-light);
+    --color-text-accent: var(--color-text-accent);
+    --color-text-danger: var(--color-text-danger);
+
+    /* Botones */
+    --color-btn-primary-bg: var(--color-btn-primary-bg);
+    --color-btn-primary-text: var(--color-btn-primary-text);
+    --color-btn-primary-hover-bg: var(--color-btn-primary-hover-bg);
+    --color-btn-primary-hover-text: var(--color-btn-primary-hover-text);
+    --color-btn-secondary-bg: var(--color-btn-secondary-bg);
+    --color-btn-secondary-text: var(--color-btn-secondary-text);
+
+    /* Links y Bordes */
+    --color-link-active: var(--color-link-active);
+    --color-link-hover: var(--color-link-hover);
+    --color-link-on-light: var(--color-link-on-light);
+    --color-border-primary: var(--color-border-primary);
+    --color-border-muted-on-light: var(--color-border-muted-on-light);
+
+    /* Acentos */
+    --color-accent-success: var(--color-accent-success);
+    --color-accent-warning: var(--color-accent-warning);
+
+    /* Fuentes (de layout.tsx) */
+    --font-family-sans: var(--font-mukta);
+    --font-family-mono: var(--font-geist-mono);
+}
+
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+html,
+body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+}
